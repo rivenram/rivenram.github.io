@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --col01: rgb(13, 7, 66);
+    --col02: rgb(67, 67, 107);
+    --col03: rgb(88, 83, 246);
+    --col04: rgb(76, 70, 145);
+    --col05: rgb(119, 67, 125);
+    --border: 40px solid var(--col01);
+    --border02: 10px solid var(--col02);
+}
+
+#box1{
+    width: 20%;
+    height: 90%;
+    position: relative;
+    top: 50px;
+    align-content: space-between;
+    background-color: var(--col03);
+    border: var(--border02);
+}
+
+#box2{
+    width: 20%;
+    height: 90%;
+    position: relative;
+    top: 250px;
+    align-content: space-between;
+    background-color: var(--col03);
+    border: var(--border02);
+}
+
+#box3{
+    width: 20%;
+    height: 90%;
+    position: relative;
+    top: 50px;
+    align-content: space-between;
+    background-color: var(--col03);
+    border: var(--border02);
+}
+
+#box4{
+    width: 20%;
+    height: 90%;
+    position: relative;
+    top: 250px;
+    background-color: var(--col03);
+    border: var(--border02);
+}
+
+#box5{
+    width: 20%;
+    height: 90%;
+    position: relative;
+    top: 50px;
+    background-color: var(--col03);
+    border: var(--border02);
+}
+
+#box6{
+    width: 80%;
+    height: 80%;
+    background-color: var(--col05);
+    border: 20px solid;
+    padding: 20px;
+    border: var(--border02);
+    border-color: 20px solid rgb(--col02);
+}
+
+#bg-wrapper{
+    background-color: var(--col04);
+    border: var(--border);
+    width: 99vw;
+    height: 177vw;
+    padding: 0px;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, var(--comp-col01))
+}
+
+#top{
+    border-color: rgb(--col02);
+    width: 93vw;
+    height: 177vw;
+    column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#bottom{
+    border-color: rgb(--col02);
+    width: 99vw;
+    height: 177vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
