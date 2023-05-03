@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Codes to set the base of the webpage, linking the html with the css and javascript used for the web  -->
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Title of the webpage as shown at users browser tab  -->
+    <title>Loading Page</title>
+    <!-- To load the fakeload javascript for the fake loading bar  -->
+    <script src="./fakeLoad.js" defer></script>
+
+  </head>
+
+  <body id="load-body">
+
+      <h1>Haruomi Hosono</h1>
+      <!-- Connecting the fake loading code and to create the fake loading duration (4000ms = 4 seconds)  -->
+      <button id="load-link" onclick="loadPageAfterDelay(4000, './hosono.html')">Enter</button>
+      <!-- Code to make the fake loading bar works  -->
+      <div id="load-throbber">Loading</div>
+
+  </body>
+
+</html>
