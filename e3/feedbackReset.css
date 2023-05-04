@@ -1,0 +1,15 @@
+nav ol li a {
+  color: var(--col-01);
+  text-decoration: none;
+  /* cursor pointer to indicate interactivity on the mouse cursor on hover  */
+  cursor: pointer;
+}
+
+/* Used red colour for the button as it contrasts with the blue and purple and can be viewed in both light and dark colour scheme  */
+#mode-button{
+  background-color: red;
+  border: 0;
+  color: var(--col-01);
+  text-decoration: none;
+  cursor: pointer;
+}

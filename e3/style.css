@@ -1,0 +1,205 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+/* The reason I chose these colour palette is simply because I like blue. I used similar colour scheme in the previous assignments. */
+  --col-01:#090640;
+  --col-02:#00eeff;
+  --col-03:#460463;
+  --col-04:#dd00ff;
+  font-size: 16px;
+  /* Scroll behaviour makes the scrolling animation smoother, making it easier to view */
+  scroll-behavior: smooth;
+} 
+
+/* Basic positioning code for the contents (texts, images, margin, etc) */
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav li{
+  font-size: 1rem;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+/* text formatting */
+/* I didn't change much as I think the initial formatting was already good enough and up to standard with other websites (such as wikipedia) */
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+/* image formatting  */
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+#mode-button{
+  /* To make the button appear on the right  */
+  float: right;
+  /* Sticky will fix the button position to always appear on the right, no matter how the user scrolls.  */
+  position: sticky;
+  top: 1rem;
+}
+
+/* Codes for the initial loading page  */
+
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button editing code  */
+
+#load-link{
+  /* Code to change the button colour as users hover over it  */
+  /* I wanted to create more interaction on the button so I added changing colour for it  */
+  line-height: 1rem;
+  /* Codes for the initial colour of the button before it transform to another colour on hover  */
+  background-color: var(--col-03);
+  border: 0;
+  /* Cursor pointer changes the shape of the cursor when users hover over it  */
+  cursor: pointer;
+  /* Button colour  */
+  color: var(--col-04);
+  transition: background-color 1s, color 1s;
+}
+
+#load-link:hover{
+  /* Codes for the button colour as it change when user hover over the button  */
+  /* I made sure to use contrasting colours so users can see it and it doesn't blend with the background and other contents  */
+  background-color: var(--col-04);
+  color: var(--col-01);
+}
+
+/* Codes for the fake loading bar  */
+
+#load-throbber{
+  /* Loading bar size  */
+  width: 50%;
+  height: 40px;
+  /* Loading bar colour  */
+  background-color: var(--col-04);
+  border: 2px solid var(--col-03);
+  border-radius: 20px;
+  /* Display: none makes it dissapear so it will only appear after user clicked the button  */
+  display: none;
+  /* Loading text formatting  */
+  text-align: center;
+  line-height: 150%;
+  /* Loading bar animation as it fills the screen width in 4 seconds  */
+  /* The reason I used this animation is because honestly I was initially going to create a normal fake loading bar where the bar fills up, but my code doesnt work so I settled with this  */
+  animation: loading 4s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes loading {
+  /* As I messed up my fake loading bar, I set the initial width to 10% so it will fully cover the 'loading' text from the beginning of the fake loading bar  */
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
+
+/* Codes to indicate URLs in the texts  */
+/* I used purple and pink as I believe this is the generally used colour for URLs in websites, and these colours contrasts with the blue I used and viewable even with dark and light background  */
+
+a:link, a:visited {
+  color:rgb(122, 2, 202);
+}
+
+a:hover {
+  color:rgb(204, 0, 255);
+}
